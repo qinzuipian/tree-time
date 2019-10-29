@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+<script>
+	var date1 = new Date(1529100000);
+	// var date1 = "Mon Jan 19 1970 01:00:00 GMT+0800";
+	console.log(Date.parse("Mon Jan 19 1970 00:45:00 GMT+0800"))
+	console.log(date1)
+	// var data1 = 01;
+	time1 = Date.parse(date1);
+	console.log(time1)
+	date1.setDate(date1.getDate()+1);
+	// date1.setUTCHours('-8','0','0');
+	date1.setUTCHours('16','0','0');
+	time2 = Date.parse(date1);
+	console.log(time2)
+	var ok = 1;
+	while(ok){
+	time1 = time1 + 1000*60*15;
+	if(time1 > time2){
+		console.log(time2,time1)
+		ok=0;
+	}else{
+		date2 = new Date(time1);
+		// console.log(date2.getHours()+'时'+date2.getMinutes()+'分')
+		// document.write(date2.getHours()+'时'+date2.getMinutes()+'分<br>')
+		// console.log(date2.getHours()+'时'+date2.getMinutes()+'分')
+		var time5;
+		time5 = date2.getHours()<10?(date2.getMinutes()<10?'0'+date2.getHours()+':'+'0'+date2.getMinutes():'0'+date2.getHours()+':'+date2.getMinutes()):(date2.getMinutes()<10?date2.getHours()+':'+'0'+date2.getMinutes():date2.getHours()+':'+date2.getMinutes());
+		console.log(time5);
+		document.write(time5+'<br>');
+	}}
+</script>	
+</head>
+<body>
+
+</body>
+</html>
