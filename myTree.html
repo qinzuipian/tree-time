@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+
+<script>
+	var list=[
+				{
+				codeType: "1",
+				createDate: "2019-10-29 16:15:53",
+				enterpriseId: 90,
+				enterpriseName: "河北数据",
+				id: 104,
+				isShow: false,
+				meterId: "02",
+				mn: "900000000000000000000001",
+				modifyDate: "2019-10-29 16:15:53",
+				monitorName: "测试对接1",
+				route: "12",
+				shopId: 36,
+				shopName: "车间二",
+				status: "1",
+				swicthId: "000000000",
+				tn: "1",
+				type: "1"},
+				{
+				cameraIndexCode: "0002",
+				codeType: "2",
+				collectType: "振动量设备",
+				createDate: "2019-10-28 16:57:43",
+				ct: "",
+				ecPolluteType: "2",
+				ecType: "6",
+				enterpriseId: 90,
+				enterpriseName: "河北数据",
+				equipmentUse: "无",
+				id: 103,
+				isShow: true,
+				meterId: "23",
+				mn: "000000000",
+				modifyDate: "2019-10-28 16:57:42",
+				monitorName: "西安总进线",
+				pt: "",
+				remark: "",
+				route: "12",
+				shopId: 36,
+				shopName: "车间二",
+				swicthId: "000000002",
+				type: "1",
+				xAccelerat: 16,
+				xFrequen: 16,
+				yAccelerat: 16,
+				yFrequen: 16,
+				zAccelerat: 16,
+				zFrequen: 16},
+				{
+				cameraIndexCode: "0002",
+				codeType: "0",
+				collectType: "振动量设备",
+				createDate: "2019-10-25 14:45:01",
+				ct: "",
+				ecPolluteType: "2",
+				ecType: "6",
+				enterpriseId: 97,
+				enterpriseName: "某化工厂",
+				equipmentUse: "无",
+				id: 102,
+				isShow: true,
+				meterId: "10",
+				mn: "000000000000000000000010",
+				modifyDate: "2019-10-25 19:44:09",
+				monitorName: "西安",
+				pt: "",
+				remark: "",
+				route: "12",
+				shopId: 40,
+				shopName: "车间二",
+				swicthId: "000000000",
+				type: "2"},
+				{
+				cameraIndexCode: "",
+				codeType: "1",
+				collectType: "用电",
+				createDate: "2019-10-21 14:31:36",
+				ct: "10",
+				ecPolluteType: "1",
+				ecType: "4",
+				electricLimit: 10,
+				electricTime: 10,
+				enterpriseId: 90,
+				enterpriseName: "河北数据",
+				equipmentUse: "",
+				id: 100,
+				isShow: false,
+				meterId: "23",
+				mn: "00032100023",
+				modifyDate: "2019-10-25 15:44:46",
+				monitorName: "测试演示箱",
+				powerLimit: 100,
+				pt: "20",
+				radarCount: 10,
+				radarProport: 10,
+				ratedPower: 100,
+				remark: "",
+				route: "",
+				shopId: 36,
+				shopName: "车间二",
+				swicthId: "000321000",
+				type: "2",
+				xAccelerat: 10,
+				xFrequen: 10,
+				yAccelerat: 10,
+				yFrequen: 10,
+				zAccelerat: 10,
+				zFrequen: 10},
+				{
+				cameraIndexCode: "",
+				codeType: "1",
+				collectType: "用电",
+				createDate: "2019-10-11 12:53:52",
+				ct: "1",
+				ecPolluteType: "1",
+				ecType: "4",
+				electricLimit: 21,
+				electricTime: 22,
+				enterpriseId: 90,
+				enterpriseName: "河北数据",
+				equipmentUse: "",
+				id: 99,
+				isShow: false,
+				meterId: "99",
+				mn: "",
+				model: "2",
+				modifyDate: "2019-10-11 12:53:51",
+				monitorName: "Fool",
+				powerLimit: 100,
+				pt: "1",
+				ratedPower: 100,
+				remark: "",
+				route: "",
+				shopId: 36,
+				shopName: "车间二",
+				swicthId: "ee332",
+				tn: "",
+				type: "2"},
+				{
+				cameraIndexCode: "",
+				codeType: "0",
+				createDate: "2019-10-17 17:28:20",
+				ct: "",
+				currentSpeed: 10,
+				ecPolluteType: "1",
+				ecType: "4",
+				electricLimit: 30,
+				enterpriseId: 90,
+				enterpriseName: "河北数据",
+				equipmentUse: "",
+				flow: 10,
+				id: 15,
+				isShow: false,
+				meterId: "02",
+				mn: "0003210012",
+				modifyDate: "2019-10-25 15:51:35",
+				monitorName: "测试报文",
+				powerLimit: 100,
+				pt: "",
+				ratedPower: 100,
+				remark: "",
+				route: "",
+				shopId: 35,
+				shopName: "车间一",
+				status: "1",
+				swicthId: "000321001",
+				temperature: 10,
+				tn: "1",
+				type: "1"},
+				{
+				codeType: "1",
+				createDate: "2019-10-10 11:53:54",
+				electricLimit: 20,
+				enterpriseId: 89,
+				enterpriseName: "西安印刷",
+				id: 14,
+				isShow: false,
+				meterId: "02",
+				mn: "6",
+				modifyDate: "2019-10-21 15:11:42",
+				monitorName: "测试点4",
+				powerLimit: 100,
+				ratedPower: 100,
+				route: "30",
+				runNum: 200,
+				shopId: 36,
+				shopName: "车间一",
+				status: "1",
+				swicthId: "000000000000000032100002",
+				tn: "1",
+				type: "1"},
+				{
+				backup: 1,
+				codeType: "0",
+				createDate: "2019-10-10 11:52:51",
+				electricLimit: 30,
+				enterpriseId: 89,
+				enterpriseName: "西安印刷",
+				id: 13,
+				isShow: false,
+				mn: "14",
+				modifyDate: "2019-10-21 15:52:58",
+				monitorName: "测试点3",
+				powerLimit: 100,
+				ratedPower: 100,
+				route: "30",
+				runNum: 100,
+				shopId: 36,
+				shopName: "车间一",
+				status: "1",
+				tn: "1",
+				type: "1"},
+				{
+				backup: 0,
+				cameraIndexCode: "",
+				codeType: "0",
+				createDate: "2019-10-09 12:11:16",
+				ct: "10",
+				ecPolluteType: "1",
+				ecType: "4",
+				electricLimit: 10,
+				electricTime: 10,
+				enterpriseId: 89,
+				enterpriseName: "西安印刷",
+				equipmentUse: "",
+				id: 12,
+				isShow: false,
+				meterId: "02",
+				mn: "13",
+				model: "001",
+				modifyDate: "2019-10-12 11:03:09",
+				monitorName: "测试点2",
+				powerLimit: 100,
+				pt: "20",
+				ratedPower: 100,
+				remark: "",
+				route: "",
+				runNum: 200,
+				shopId: 36,
+				shopName: "车间一",
+				status: "1",
+				swicthId: "001",
+				tn: "1",
+				type: "1"},
+				{
+				backup: 0,
+				codeType: "1",
+				createDate: "2019-10-09 16:43:17",
+				electricLimit: 30,
+				enterpriseId: 90,
+				enterpriseName: "河北数据",
+				equipmentName: "",
+				id: 11,
+				isShow: false,
+				mn: "12",
+				modifyDate: "2019-10-21 15:53:01",
+				monitorName: "测试点1",
+				powerLimit: 100,
+				ratedPower: 100,
+				route: "30",
+				runNum: 300,
+				shopId: 35,
+				shopName: "车间一",
+				status: "1",
+				tn: "1",
+				type: "1"}
+			];
+
+			changeJson(list);
+			function changeJson(data){
+				var dataList = [];
+				data.forEach(function (data) {
+					for (var i = 0; i < dataList.length; i++) {
+						if (dataList[i].id === data.enterpriseId) {
+							for (var j = 0; j< dataList[i].children.length; j++){
+								if(dataList[i].children[j].shopId === data.shopId) {
+									console.log(1111);
+
+									for (var k = 0; k < dataList[i].children[j].children.length; k++) {
+										if(dataList[i].children[j].children[k].id === data.codeType) {
+											dataList[i].children[j].children[k].children.push({
+												label: data.monitorName, id: data.id 
+
+											})
+
+											return;
+										}
+									}
+									dataList[i].children[j].children.push({
+										label: data.codeType === "0" ? '生产设备' : data.codeType === "1" ? '治污设备' : '总进线',
+                                        id: data.codeType,
+										children: [{ label: data.monitorName, id: data.id }]
+
+									})
+
+									return;
+								}
+			
+							}
+							dataList[i].children.push({
+								label: data.shopName,
+								shopId:data.shopId,
+								children: [{
+									label: data.codeType === "0" ? '生产设备' : data.codeType === "1" ? '治污设备' : '总进线',
+                                    id: data.codeType,
+									children: [{ label: data.monitorName, id: data.id }]
+								}]
+							});
+							dataList[i].num++;
+							return;
+						}
+					}
+					dataList.push({
+						label: data.enterpriseName,
+						id: data.enterpriseId,
+						num: 1,
+						children: [{
+							label: data.shopName,
+							shopId:data.shopId,
+							children: [{
+								label: data.codeType === "0" ? '生产设备' : data.codeType === "1" ? '治污设备' : '总进线',
+                                id: data.codeType,
+								children: [{ label: data.monitorName, id: data.id }]
+								}]
+							}]
+					});
+				})
+				console.log(dataList);
+			}
+</script>
+	
+</body>
+</html>
