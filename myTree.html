@@ -5,12 +5,12 @@
 	<title></title>
 </head>
 <body>
-
+	<div>
+		数组list转化为树状图结构
+	</div>
 
 <script>
-	var list=[
-				{
-				codeType: "1",
+	var list=[{codeType: "1",
 				createDate: "2019-10-29 16:15:53",
 				enterpriseId: 90,
 				enterpriseName: "河北数据",
@@ -274,41 +274,35 @@
 				shopName: "车间一",
 				status: "1",
 				tn: "1",
-				type: "1"}
-			];
+				type: "1"}];
+	changeJson(list);
+	function changeJson(data){
+		var dataList = [];
+		data.forEach(function (data) {
+			for (var i = 0; i < dataList.length; i++) {
+				if (dataList[i].id === data.enterpriseId) {
+					for (var j = 0; j< dataList[i].children.length; j++){
+						if(dataList[i].children[j].shopId === data.shopId) {
 
-			changeJson(list);
-			function changeJson(data){
-				var dataList = [];
-				data.forEach(function (data) {
-					for (var i = 0; i < dataList.length; i++) {
-						if (dataList[i].id === data.enterpriseId) {
-							for (var j = 0; j< dataList[i].children.length; j++){
-								if(dataList[i].children[j].shopId === data.shopId) {
-									console.log(1111);
-
-									for (var k = 0; k < dataList[i].children[j].children.length; k++) {
+								for (var k = 0; k < dataList[i].children[j].children.length; k++) {
 										if(dataList[i].children[j].children[k].id === data.codeType) {
 											dataList[i].children[j].children[k].children.push({
-												label: data.monitorName, id: data.id 
-
+												label: data.monitorName, id: data.id
 											})
-
 											return;
 										}
-									}
-									dataList[i].children[j].children.push({
+								}
+								dataList[i].children[j].children.push({
 										label: data.codeType === "0" ? '生产设备' : data.codeType === "1" ? '治污设备' : '总进线',
                                         id: data.codeType,
 										children: [{ label: data.monitorName, id: data.id }]
 
-									})
-
-									return;
-								}
+								})
+								return;
+						}
 			
-							}
-							dataList[i].children.push({
+					}
+					dataList[i].children.push({
 								label: data.shopName,
 								shopId:data.shopId,
 								children: [{
@@ -316,12 +310,12 @@
                                     id: data.codeType,
 									children: [{ label: data.monitorName, id: data.id }]
 								}]
-							});
-							dataList[i].num++;
-							return;
-						}
-					}
-					dataList.push({
+					});
+					dataList[i].num++;
+					return;
+				}
+			}
+			dataList.push({
 						label: data.enterpriseName,
 						id: data.enterpriseId,
 						num: 1,
@@ -334,10 +328,10 @@
 								children: [{ label: data.monitorName, id: data.id }]
 								}]
 							}]
-					});
-				})
-				console.log(dataList);
-			}
+			});
+		})
+		console.log(dataList);
+	}
 </script>
 	
 </body>
